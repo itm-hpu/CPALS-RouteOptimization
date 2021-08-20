@@ -1,0 +1,9 @@
+C:\Users\Svinge\Documents\GitHub\black-dashboard-flask\obj\Any CPU\Debug\black-dashboard-flask.pyproj.CoreCompileInputs.cache
+C:\Users\Svinge\Documents\GitHub\black-dashboard-flask\bin\Microsoft.PythonTools.WebRole.dll
+C:\Users\Svinge\Documents\GitHub\black-dashboard-flask\bin\wfastcgi.py
+C:\Users\Svinge\Source\Repos\BlackDashboardFlask\obj\Any CPU\Debug\black-dashboard-flask.pyproj.CoreCompileInputs.cache
+C:\Users\Svinge\Source\Repos\BlackDashboardFlask\bin\Microsoft.PythonTools.WebRole.dll
+C:\Users\Svinge\Source\Repos\BlackDashboardFlask\bin\wfastcgi.py
+C:\Users\farde\Documents\GitHub\BlackDashboardFlask\obj\Any CPU\Debug\black-dashboard-flask.pyproj.CoreCompileInputs.cache
+C:\Users\farde\Documents\GitHub\BlackDashboardFlask\bin\Microsoft.PythonTools.WebRole.dll
+C:\Users\farde\Documents\GitHub\BlackDashboardFlask\bin\wfastcgi.py

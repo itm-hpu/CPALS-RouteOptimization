@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1657a675-5627-4c10-a193-44d2d93199ee}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>run.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <InterpreterId>MSBuild|main_env|$(MSBuildProjectFullPath)</InterpreterId>
+    <WebBrowserUrl>127.0.0.1</WebBrowserUrl>
+    <PythonWsgiHandler>{StartupModule}.wsgi_app</PythonWsgiHandler>
+    <WebBrowserPort>5000</WebBrowserPort>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".dockerignore" />
+    <Content Include=".gitignore" />
+    <Content Include=".git\config" />
+    <Content Include=".git\description" />
+    <Content Include=".git\HEAD" />
+    <Content Include=".git\hooks\applypatch-msg.sample" />
+    <Content Include=".git\hooks\commit-msg.sample" />
+    <Content Include=".git\hooks\fsmonitor-watchman.sample" />
+    <Content Include=".git\hooks\post-update.sample" />
+    <Content Include=".git\hooks\pre-applypatch.sample" />
+    <Content Include=".git\hooks\pre-commit.sample" />
+    <Content Include=".git\hooks\pre-merge-commit.sample" />
+    <Content Include=".git\hooks\pre-push.sample" />
+    <Content Include=".git\hooks\pre-rebase.sample" />
+    <Content Include=".git\hooks\pre-receive.sample" />
+    <Content Include=".git\hooks\prepare-commit-msg.sample" />
+    <Content Include=".git\hooks\update.sample" />
+    <Content Include=".git\index" />
+    <Content Include=".git\info\exclude" />
+    <Content Include=".git\logs\HEAD" />
+    <Content Include=".git\logs\refs\heads\master" />
+    <Content Include=".git\logs\refs\remotes\origin\HEAD" />
+    <Content Include=".git\objects\pack\pack-a39443da7d18995c91d4fb5d8fc86357cc247ba8.idx" />
+    <Content Include=".git\objects\pack\pack-a39443da7d18995c91d4fb5d8fc86357cc247ba8.pack" />
+    <Content Include=".git\packed-refs" />
+    <Content Include=".git\refs\heads\master" />
+    <Content Include=".git\refs\remotes\origin\HEAD" />
+    <Content Include="app\base\static\assets\css\black-dashboard.css" />
+    <Content Include="app\base\static\assets\css\black-dashboard.css.map" />
+    <Content Include="app\base\static\assets\css\black-dashboard.min.css" />
+    <Content Include="app\base\static\assets\css\nucleo-icons.css" />
+    <Content Include="app\base\static\assets\demo\demo.css" />
+    <Content Include="app\base\static\assets\demo\demo.js" />
+    <Content Include="app\base\static\assets\fonts\nucleo.eot" />
+    <Content Include="app\base\static\assets\fonts\nucleo.ttf" />
+    <Content Include="app\base\static\assets\fonts\nucleo.woff" />
+    <Content Include="app\base\static\assets\fonts\nucleo.woff2" />
+    <Content Include="app\base\static\assets\img\12345.png" />
+    <Content Include="app\base\static\assets\img\anime3.png" />
+    <Content Include="app\base\static\assets\img\anime6.png" />
+    <Content Include="app\base\static\assets\img\apple-icon.png" />
+    <Content Include="app\base\static\assets\img\bg5.jpg" />
+    <Content Include="app\base\static\assets\img\default-avatar.png" />
+    <Content Include="app\base\static\assets\img\emilyz.jpg" />
+    <Content Include="app\base\static\assets\img\favicon.png" />
+    <Content Include="app\base\static\assets\img\header.jpg" />
+    <Content Include="app\base\static\assets\img\img_3115.jpg" />
+    <Content Include="app\base\static\assets\img\james.jpg" />
+    <Content Include="app\base\static\assets\img\marker_blue_circle.png" />
+    <Content Include="app\base\static\assets\img\marker_gray_circle.png" />
+    <Content Include="app\base\static\assets\img\marker_red_circle.png" />
+    <Content Include="app\base\static\assets\img\mike.jpg" />
+    <Content Include="app\base\static\assets\img\now-logo.png" />
+    <Content Include="app\base\static\assets\js\black-dashboard.js" />
+    <Content Include="app\base\static\assets\js\black-dashboard.js.map" />
+    <Content Include="app\base\static\assets\js\black-dashboard.min.js" />
+    <Content Include="app\base\static\assets\js\core\bootstrap.min.js" />
+    <Content Include="app\base\static\assets\js\core\jquery.min.js" />
+    <Content Include="app\base\static\assets\js\core\popper.min.js" />
+    <Content Include="app\base\static\assets\js\plugins\bootstrap-notify.js" />
+    <Content Include="app\base\static\assets\js\plugins\chartjs.min.js" />
+    <Content Include="app\base\static\assets\js\plugins\perfect-scrollbar.jquery.min.js" />
+    <Content Include="app\base\static\assets\js\scripts\HDWirelessApi.js" />
+    <Content Include="app\base\static\assets\js\scripts\mainInit.js" />
+    <Content Include="app\base\static\assets\js\scripts\simulate.js" />
+    <Content Include="app\base\static\assets\js\scripts\routes.js" />
+    <Content Include="app\base\static\assets\js\scripts\views\NodesTab.js" />
+    <Content Include="app\base\static\assets\js\scripts\dataClasses\node.js" />
+    <Content Include="app\base\static\assets\js\scripts\views\OrdersTab.js" />
+    <Content Include="app\base\static\assets\js\scripts\dataClasses\order.js" />
+    <Content Include="app\base\static\assets\js\scripts\dataClasses\truck.js" />
+    <Content Include="app\base\static\assets\js\scripts\map.js" />
+    <Content Include="app\base\static\assets\scss\black-dashboard.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\bootstrap-grid.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\bootstrap.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_alert.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_badge.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_buttons.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_caret.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_deprecate.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_float.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_forms.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_gradients.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_grid.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_hover.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_image.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_list-group.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_lists.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_pagination.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_resize.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_size.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_table-row.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_transition.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins\_visibility.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\utilities\_align.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\utilities\_background.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\utilities\_borders.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\utilities\_display.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\utilities\_embed.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\utilities\_flex.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\utilities\_float.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\utilities\_overflow.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\utilities\_position.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\utilities\_shadows.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\utilities\_sizing.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\utilities\_spacing.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\utilities\_stretched-link.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\utilities\_text.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\utilities\_visibility.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\vendor\_rfs.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_alert.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_badge.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_breadcrumb.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_button-group.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_buttons.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_card.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_carousel.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_close.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_code.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_custom-forms.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_dropdown.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_forms.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_functions.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_grid.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_images.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_input-group.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_jumbotron.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_list-group.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_media.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_mixins.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_modal.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_nav.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_navbar.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_pagination.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_popover.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_print.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_progress.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_reboot.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_root.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_spinners.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_tables.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_toasts.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_tooltip.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_transitions.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_type.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_utilities.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\bootstrap\_variables.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\cards\_card-chart.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\cards\_card-map.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\cards\_card-plain.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\cards\_card-task.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\cards\_card-user.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\mixins\opacity.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\mixins\_alert.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\mixins\_background-variant.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\mixins\_badges.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\mixins\_buttons.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\mixins\_dropdown.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\mixins\_forms.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\mixins\_icon.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\mixins\_inputs.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\mixins\_modals.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\mixins\_page-header.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\mixins\_popovers.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\mixins\_vendor-prefixes.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\mixins\_wizard.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\utilities\_backgrounds.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\utilities\_floating.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\utilities\_helper.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\utilities\_position.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\utilities\_shadows.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\utilities\_sizing.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\utilities\_spacing.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\utilities\_text.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\utilities\_transform.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\vendor\_plugin-animate-bootstrap-notify.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\vendor\_plugin-perfect-scrollbar.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_alerts.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_buttons.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_card.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_checkboxes-radio.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_dropdown.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_example-pages.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_fixed-plugin.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_footer.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_forms.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_functions.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_images.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_input-group.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_misc.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_mixins.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_modal.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_navbar.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_rtl.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_sidebar-and-main-panel.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_tables.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_type.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_utilities.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_variables.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\custom\_white-content.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\plugins\_plugin-perfect-scrollbar.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\_buttons.scss" />
+    <Content Include="app\base\static\assets\scss\black-dashboard\_typography.scss" />
+    <Content Include="app\base\templates\accounts\login.html" />
+    <Content Include="app\base\templates\accounts\register.html" />
+    <Content Include="app\base\templates\includes\fixed-plugin.html" />
+    <Content Include="app\base\templates\includes\footer.html" />
+    <Content Include="app\base\templates\includes\navigation-rtl.html" />
+    <Content Include="app\base\templates\includes\navigation.html" />
+    <Content Include="app\base\templates\includes\scripts-sidebar.html" />
+    <Content Include="app\base\templates\includes\scripts.html" />
+    <Content Include="app\base\templates\includes\sidebar-rtl.html" />
+    <Content Include="app\base\templates\includes\sidebar.html" />
+    <Content Include="app\base\templates\layouts\base-rtl.html" />
+    <Content Include="app\base\templates\layouts\base.html" />
+    <Content Include="app\home\templates\index.html" />
+    <Content Include="app\home\templates\login.html" />
+    <Content Include="app\home\templates\page-403.html" />
+    <Content Include="app\home\templates\page-404.html" />
+    <Content Include="app\home\templates\page-500.html" />
+    <Content Include="app\home\templates\page-blank.html" />
+    <Content Include="app\home\templates\page-rtl-support.html" />
+    <Content Include="app\home\templates\page-user.html" />
+    <Content Include="app\home\templates\register.html" />
+    <Content Include="app\home\templates\ui-icons.html" />
+    <Content Include="app\home\templates\ui-maps.html" />
+    <Content Include="app\home\templates\ui-notifications.html" />
+    <Content Include="app\home\templates\ui-tables.html" />
+    <Content Include="app\home\templates\ui-typography.html" />
+    <Content Include="app\home\templates\orders.html" />
+    <Content Include="black-dashboard-flask.pyproj" />
+    <Content Include="CHANGELOG.md" />
+    <Content Include="docker-compose.yml" />
+    <Content Include="Dockerfile" />
+    <Content Include="LICENSE.md" />
+    <Content Include="media\black-dashboard-flask-intro.gif" />
+    <Content Include="media\black-dashboard-flask-screen-login.png" />
+    <Content Include="media\black-dashboard-flask-screen-register.png" />
+    <Content Include="media\black-dashboard-flask-screen-tables.png" />
+    <Content Include="media\black-dashboard-flask-screen-typography.png" />
+    <Content Include="media\black-dashboard-flask-screen-user.png" />
+    <Content Include="media\black-dashboard-flask-screen-white.png" />
+    <Content Include="media\black-dashboard-flask-screen.png" />
+    <Content Include="scania.geojson" />
+    <Content Include="nginx\appseed-app.conf" />
+    <Content Include="package.json" />
+    <Content Include="Procfile" />
+    <Content Include="README.md" />
+    <Content Include="requirements-mysql.txt" />
+    <Content Include="requirements-pgsql.txt" />
+    <Content Include="requirements.txt" />
+    <Content Include="runtime.txt" />
+    <Content Include="kthlab.geojson" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app\base\forms.py" />
+    <Compile Include="app\base\models.py" />
+    <Compile Include="app\base\routes.py" />
+    <Compile Include="app\home\backend\getTruckPos.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\base\util.py" />
+    <Compile Include="app\base\__init__.py" />
+    <Compile Include="app\home\backend\getClosestNode.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\home\backend\database.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\home\backend\networkGraph.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\home\backend\networkSetup.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\home\backend\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\home\routes.py" />
+    <Compile Include="app\home\__init__.py" />
+    <Compile Include="app\__init__.py" />
+    <Compile Include="config.py" />
+    <Compile Include="gunicorn-cfg.py" />
+    <Compile Include=".env">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="run.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git" />
+    <Folder Include=".git\hooks" />
+    <Folder Include=".git\info" />
+    <Folder Include=".git\logs" />
+    <Folder Include=".git\logs\refs\" />
+    <Folder Include=".git\logs\refs\heads" />
+    <Folder Include=".git\logs\refs\remotes\" />
+    <Folder Include=".git\logs\refs\remotes\origin" />
+    <Folder Include=".git\objects\" />
+    <Folder Include=".git\objects\pack" />
+    <Folder Include=".git\refs\" />
+    <Folder Include=".git\refs\heads" />
+    <Folder Include=".git\refs\remotes\" />
+    <Folder Include=".git\refs\remotes\origin" />
+    <Folder Include="app" />
+    <Folder Include="app\base" />
+    <Folder Include="app\base\static\" />
+    <Folder Include="app\base\static\assets\" />
+    <Folder Include="app\base\static\assets\css" />
+    <Folder Include="app\base\static\assets\demo" />
+    <Folder Include="app\base\static\assets\fonts" />
+    <Folder Include="app\base\static\assets\img" />
+    <Folder Include="app\base\static\assets\js" />
+    <Folder Include="app\base\static\assets\js\core" />
+    <Folder Include="app\base\static\assets\js\scripts\" />
+    <Folder Include="app\base\static\assets\js\plugins" />
+    <Folder Include="app\base\static\assets\js\scripts\dataClasses\" />
+    <Folder Include="app\base\static\assets\js\scripts\views\" />
+    <Folder Include="app\base\static\assets\scss" />
+    <Folder Include="app\base\static\assets\scss\black-dashboard" />
+    <Folder Include="app\base\static\assets\scss\black-dashboard\bootstrap" />
+    <Folder Include="app\base\static\assets\scss\black-dashboard\bootstrap\mixins" />
+    <Folder Include="app\base\static\assets\scss\black-dashboard\bootstrap\utilities" />
+    <Folder Include="app\base\static\assets\scss\black-dashboard\bootstrap\vendor" />
+    <Folder Include="app\base\static\assets\scss\black-dashboard\custom" />
+    <Folder Include="app\base\static\assets\scss\black-dashboard\custom\cards" />
+    <Folder Include="app\base\static\assets\scss\black-dashboard\custom\mixins" />
+    <Folder Include="app\base\static\assets\scss\black-dashboard\custom\utilities" />
+    <Folder Include="app\base\static\assets\scss\black-dashboard\custom\vendor" />
+    <Folder Include="app\base\static\assets\scss\black-dashboard\plugins" />
+    <Folder Include="app\base\templates\" />
+    <Folder Include="app\base\templates\accounts" />
+    <Folder Include="app\base\templates\includes" />
+    <Folder Include="app\base\templates\layouts" />
+    <Folder Include="app\home\backend\" />
+    <Folder Include="app\home" />
+    <Folder Include="app\home\templates" />
+    <Folder Include="media" />
+    <Folder Include="nginx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="main_env\">
+      <Id>main_env</Id>
+      <Version>3.8</Version>
+      <Description>main_env (Python 3.8 (32-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X86</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

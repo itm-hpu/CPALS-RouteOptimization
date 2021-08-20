@@ -1,0 +1,258 @@
+﻿{% extends "layouts/base.html" %}
+
+{% block title %} UI Tables {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<!--<script>orderData = {};</script>-->
+
+
+<div class="tab navbar-light bg-primary">
+    <button class="tablinks" onclick="openCity(event, 'CompletedOrders');initCompletedOrders();">Completed Orders</button>
+    <button class="tablinks" onclick="openCity(event, 'Orders');initOrder();">Orders</button>
+    <button class="tablinks" onclick="openCity(event, 'AddOrder');initAddOrders();">Add Order</button>
+    <button class="tablinks" onclick="openCity(event, 'SimulateOrder');initSimulateOrder();">Simulate Order</button>
+    <button class="tablinks" onclick="openCity(event, 'OrderOptimization');">Order Optimization</button>
+</div>
+
+<div>
+    {{ current_user.prodSite }}
+</div>
+
+
+<!-- Tab content -->
+<div id="CompletedOrders" class="tabcontent">
+    <h3 style="margin-top: 20px">Completed Orders</h3>
+    <p>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card ">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="table2" class="table">
+                                <thead>
+                                    <tr id="table2headrow" style="color:white; text-transform: uppercase;">
+                                    </tr>
+                                </thead>
+                                <tbody id="table2body">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </p>
+</div>
+
+<div id="Orders" class="tabcontent">
+    <h3 style="margin-top: 20px">Orders</h3>
+    <p>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card ">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="table2" class="table">
+                                <thead>
+                                    <tr id="table3headrow" style="color:white; text-transform: uppercase;">
+                                    </tr>
+                                </thead>
+                                <tbody id="table3body">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </p>
+</div>
+
+
+<div id="AddOrder" class="tabcontent">
+    <h3 style="margin-top: 20px">Add Order</h3>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card ">
+                    <div class="card-body addOrderFormText">
+
+
+
+                        <form id="addOrderForm" class="addOrderForm">
+
+                        </form>
+                        
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+
+<div id="SimulateOrder" class="tabcontent">
+    <h3 style="margin-top: 20px">Simulate Order</h3>
+    <p>
+        <div class="row" style="height: 100%">
+            <div class="col-md-12">
+                <div class="card ">
+                    <div class="card-body">
+                        <div class="table-responsive">
+
+                            <table id="orderSimulationResults" class="table">
+                                <thead>
+                                    <tr id="orderSimulationResultsTableHeader" style="color:white; text-transform: uppercase;">
+                                        <th>Path</th>
+                                        <th>Distance (m)</th>
+                                        <th>Time (s)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr  id="orderSimulationResultsBody">
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mapSimulationDiv">
+                    <div class="card-body mapSimulationDiv">
+                        <div id="mapSimulation">
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card ">
+                    <div class="card-body">
+                        <div class="table-responsive">
+
+                            <table id="orderSimulationTable" class="table">
+                                <thead>
+                                    <tr id="orderSimulationTableHeader" style="color:white; text-transform: uppercase;">
+                                    </tr>
+                                </thead>
+                                <tbody id="orderSimulationTableBody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </p>
+</div>
+
+
+<div id="OrderOptimization" class="tabcontent">
+    <h3 style="margin-top: 20px">Order Optimization</h3>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card ">
+
+
+                <div class="tab navbar-light" style="overflow:visible">
+                    <button class="tablinks" onclick="console.log('1')">Custom</button>
+                    <button class="tablinks" onclick="console.log('2')">All</button>
+
+
+                    <div class="tablinks dropdown">
+                        <button class="tablinks dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown button
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" onclick="console.log('3')">1</a>
+                            <a class="dropdown-item" onclick="console.log('4')">1</a>
+                            <a class="dropdown-item" onclick="console.log('5')">1</a>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card ">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        table
+                        <table id="orderOptimizationTable" class="table">
+                            <thead>
+                                <tr id="orderOptimizationTableHeader" style="color:white; text-transform: uppercase;">
+                                </tr>
+                            </thead>
+                            <tbody id="orderOptimizationTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card ">
+                <div class="card-body orderOptimizationResults">
+                    Results
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script>
+
+    $(document).ready(function () {
+            //sessionData = await mainInit();
+            initOrders();
+            document.getElementsByClassName('tablinks')[0].click();
+    });
+
+
+
+
+</script>
+
+<!--<script>
+
+
+    
+    $(document).ready(function () {
+
+        //mainInit();
+        console.log(testvar);
+        document.getElementsByClassName('tablinks')[0].click();
+        
+
+
+    });
+</script>-->
+
+{% endblock javascripts %}

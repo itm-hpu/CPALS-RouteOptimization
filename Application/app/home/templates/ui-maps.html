@@ -1,0 +1,262 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Maps {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+
+
+
+<div class="tab navbar-light bg-primary">
+    <button class="tablinks" onclick="openCity(event, 'Nodes'); initNodes()">Nodes</button>
+    <button class="tablinks" onclick="openCity(event, 'AddNode'); initAddNodes()">Add Node</button>
+
+</div>
+
+
+
+<!-- Tab content -->
+<div id="Nodes" class="tabcontent">
+    <h3 style="margin-top: 20px">Nodes</h3>
+    <p>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card ">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="table2" class="table">
+                                <thead>
+                                    <tr id="table4headrow" style="color:white; text-transform: uppercase;">
+                                    </tr>
+                                </thead>
+                                <tbody id="table4body">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </p>
+</div>
+
+
+
+<div id="AddNode" class="tabcontent">
+    <h3 style="margin-top: 20px">Add Node</h3>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card ">
+                <div class="card-body addOrderFormText1">
+
+
+
+                    <form id="addOrderForm" class="addOrderForm1">
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="flex-container">
+
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Add node
+    </button>
+    <!--
+    <button type="button" class="btn btn-primary" onclick="createNode()">
+        Create Node
+    </button>
+    -->
+    <button type="button" class="btn btn-primary" onclick="saveNodes()">
+        Save
+    </button>
+
+    <div class="distanceBox">
+        <select class="form-control" id="truckId" style="font-size:20px;width:1000px">
+            <option selected disabled>Select ID</option>
+        </select>
+
+        <input type="number" id="speed" name="speed" min="1" max="20" class="form-control" value="11" style="font-size:20px">
+
+    </div>
+
+    <div id="distanceBox" class="distanceBox"></div>
+    <div id="timeBox" class="distanceBox"></div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Select Edges</h5>
+
+                </div>
+
+                <div class="modal-body">
+
+
+                    <form class="modal-form" id="myForm" name="myForm" onsubmit="formData(); return false" method="post">
+                        <div id="nodeList" style="width:100%"></div>
+
+                    </form>
+
+
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <input type="submit" value="Submit" class="btn btn-primary" form="myForm">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Select Edges</h5>
+                </div>
+
+                <div class="card-body">
+
+                    You seem to have arrived at your destination, is this correct?
+
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" onclick="dismissArrivalState()" data-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-primary" onclick="approveArrivalState()" data-dismiss="modal">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!--
+<div class="modal fade bd-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Select Edges</h5>
+            </div>
+
+            <div class="card-body">
+
+                You seem to have arrived at your destination, is this correct?
+
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" onclick="dismissArrivalState()" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary" onclick="approveArrivalState()" data-dismiss="modal">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-plain">
+            <div class="card-body">
+                <div id="map" class="map"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="flex-container">
+
+
+
+
+    <div class="card" style="width: 20rem;">
+        <div class="card-body">
+            <h4 class="card-title">Toggle Nodes</h4>
+            <p class="card-text">Toggle between hide/ show node location.</p>
+            <label class="switch">
+                <input type="checkbox" id="showNodes">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="card" style="width: 20rem;">
+        <div class="card-body" style="height: 10rem;">
+            <h4 class="card-title">Toggle Edges</h4>
+            <p class="card-text">Toggle between hide/ show node edges.</p>
+            <label class="switch">
+                <input type="checkbox" id="showEdges">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="card" style="width: 20rem;">
+        <div class="card-body" style="height: 10rem;">
+            <h4 class="card-title">Toggle Paths</h4>
+            <p class="card-text">Toggle between hide/ show all paths.</p>
+            <label class="switch">
+                <input type="checkbox" id="showPath">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="card" style="width: 20rem;">
+        <div class="card-body" style="height: 10rem;">
+            <h4 class="card-title">Toggle Active Path</h4>
+            <p class="card-text">Toggle between hide/ show paths</p>
+            <label class="switch">
+                <input type="checkbox" id="showPathClosest">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+
+
+
+</div>
+
+    {% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+    {% block javascripts %}
+
+<!--  Google Maps Plugin    -->
+<!-- Place this tag in your head or just before your close body tag. -->
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtqlDGLHi9qGU_4AYBe1RMuW4pGbDH4lg&?libraries=geometry"></script>-->
+
+
+<!--<script defer>mainInit();</script>
+<script defer>startup();</script>-->
+
+<script>
+
+    $(document).ready(function () {
+
+
+        initMap();
+
+
+    });
+</script>
+
+    {% endblock javascripts %}
